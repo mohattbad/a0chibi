@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="icon" type="image/x-icon" href="img/logo1.ico">
+    <script src="scripts/profilev1.js" type="module"></script>
+    <script src="scripts/loadinglogic.js" type="module"></script>
+    <script src ="scripts/animation-scripts/profileupdate.js"></script>
+    <link rel="stylesheet" href="styles/urstylep.css">
+    <link rel="stylesheet" href="styles/prfleloading.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="https://media.tenor.com/AmE19LJy5ZQAAAPo/anime-dark.mp4" type="video/mp4">
+    </video>
+    <!-- profile con -->
+    <div class="profile-container">
+        <!-- back bouton -->
+         <button class="back-button" onclick="dash()">back</button>
+        <!-- Profile Picture -->
+        <div class="profile-picture">
+            <img id="profileImage" src="img/user.webp" alt="Profile Picture">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button onclick="document.getElementById('imageUpload').click()">Change Picture</button>
+        </div>
+
+        <!-- Name and Title -->
+        <div class="profile-info">
+            <h1 id="profileName">YOUR NAME</h1>
+            <h2 id="profileTitle">KHDMTK</h2>
+            <input type="text" id="nameInput" placeholder="Enter your name" style="display: none;">
+            <input type="text" id="titleInput" placeholder="Enter your title" style="display: none;">
+            <button id="editNameTitleBtn">Edit Name & Title</button>
+            <button id="saveNameTitleBtn" style="display: none;">Save</button>
+        </div>
+
+        <!-- Bio -->
+        <div class="profile-bio">
+            <p id="profileBio">
+                SMITI JA3FAR MA3RFTCH 3LACH ANA HNA
+                .............
+                .....
+            </p>
+            <textarea id="bioInput" placeholder="Enter your bio" style="display: none;"></textarea>
+            <button id="editBioBtn">Edit Bio</button>
+            <button id="saveBioBtn" style="display: none;">Save</button>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="profile-contact">
+            <h3>Contact Information</h3>
+            <ul>
+                <li><strong>Email:</strong> <span id="profileEmail">@GMAIL.COM</span></li>
+                <li><strong>Phone:</strong> <span id="profilePhone">+212 .....</span></li>
+                <li><strong>Location:</strong> <span id="profileLocation">MAROC ....</span></li>
+            </ul>
+            <button id="editContactBtn">Edit Contact Info</button>
+            <div id="contactInputs" style="display: none;">
+                <input type="email" id="emailInput" placeholder="Enter your email">
+                <input type="tel" id="phoneInput" placeholder="Enter your phone number">
+                <input type="text" id="locationInput" placeholder="Enter your location">
+                <button id="saveContactBtn">Save</button>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="profile-social">
+            <h3>Follow Me</h3>
+            <ul>
+                <li><a id="DISCORDLink" href="#nuLL" target="_blank">DISCORD</a></li>
+                <li><a id="FACEBOOKLink" href="#NULL" target="_blank">FACEBOOK</a></li>
+                <li><a id="INSTAGRAMLink" href="#NULL" target="_blank">INSTAGRAM</a></li>
+            </ul>
+            <button id="editSocialBtn">Edit Social Links</button>
+            <div id="socialInputs" style="display: none;">
+                <input type="url" id="DSDInput" placeholder="Enter DISCORD URL">
+                <input type="url" id="FACEInput" placeholder="Enter FACEBOOK URL">
+                <input type="url" id="INSTAInput" placeholder="Enter INSTAGRAM URL">
+                <button id="saveSocialBtn">Save</button>
+            </div>
+        </div>
+    </div>
+    <div id="loadingIndicator" style="display: none; position: fixed; top: 10px; right: 10px; background: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px;">
+     <div class="spinner"></div> Updating...
+</div>
+
+</div>
+
+<script>
+    function dash() {
+        // Redirect back to the login page
+        window.location.href = "dashboard.html";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,418 @@
+/* General Body Styling */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 116%;
+  /* font-family: Arial, sans-serif; */
+  overflow: auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Background Styling */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  filter: blur(8px);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Place behind other content */
+  transform: translate(0px, 0px);
+  object-fit: cover;
+  opacity: 88%;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the image covers the entire screen */
+  object-position: center;
+  /* Center the image */
+}
+
+.back1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #6e8dff2e;
+  /* filter: blur(0px); */
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/*anime*/
+
+.block {
+  position: absolute;
+  top: 26px;
+  left: 25px;
+  /* Adjusted for better positioning */
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 800;
+  /* cursor: pointer; */
+  font-family: cursive;
+  text-decoration: underline;
+  z-index: 1000;
+  /* Ensure the button is above other content */
+  border: ridge black 1px;
+  border-radius: 50px;
+  background-color: #010202;
+  color: white;
+  /* transition: all 0.3s ease; */
+}
+
+.theme-toggle {
+  background: #00000000;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  top: -38%;
+  display: unset;
+  left: -8%;
+  position: absolute;
+  outline: none;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* Toggle icon (sun/moon) */
+.toggle-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  top: 20%;
+  background-color: #ffd700;
+  /* Sun color */
+  border-radius: 50%;
+  /* position: absolute; */
+  transition: transform 0.3s ease, background-color 1.3s ease;
+}
+
+/* Sun rays (before pseudo-element) */
+.toggle-icon::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 4px;
+  height: 20px;
+  /* background-color: #ffd700; */
+  transform: translateX(-50%);
+  /* box-shadow: 
+        0 -25px 0 #ffd700,
+        0 25px 0 #ffd700,
+        -25px 0 0 #ffd700,
+        25px 0 0 #ffd700,
+        -18px -18px 0 #ffd700,
+        18px -18px 0 #ffd700,
+        -18px 18px 0 #ffd700,
+        18px 18px 0 #ffd700; */
+  transition: opacity 0.3s ease;
+}
+
+/* Moon phase (after pseudo-element) */
+.toggle-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  /* Moon color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark-mode .toggle-icon {
+  background-color: #333;
+  /* Moon color */
+  transform: translateX(30px);
+}
+
+.dark-mode .toggle-icon::before {
+  opacity: 0;
+  /* Hide sun rays */
+}
+
+.dark-mode .toggle-icon::after {
+  transform: translate(-50%, -50%) scale(1);
+  /* Show moon phase */
+}
+
+/* Back Button Styling */
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  /* Adjusted for better positioning */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: cursive;
+  text-decoration: underline;
+  z-index: 1000;
+  /* Ensure the button is above other content */
+  border: none;
+  border-radius: 50px;
+  background-color: #1091ba;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #067c87;
+  transform: scale(0.95);
+  /* Slight shrink effect */
+  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.back-button:active {
+  background-color: #56cdd8;
+  transform: scale(1.25);
+  /* Slight shrink effect */
+}
+
+/* Chibi Image Styling */
+.chibiV2 {
+  position: absolute;
+  display: flex;
+  text-align: center;
+  top: -31%;
+
+  /* Adjusted for better spacing */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.chibiV2 img {
+  width: 70%;
+  /* Adjusted for mobile */
+  max-width: 200px;
+  /* Limit maximum size */
+  border-radius: 50%;
+}
+
+/* Sign-Up Container Styling */
+.signup-container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  /* Adjusted for mobile */
+  height: 100%;
+  /* max-width: 79%; */
+  /* Limit maximum width */
+  /* padding: 206px 46px 133px 32px; */
+  /* text-align: center; */
+  /* border-radius: 14px; */
+  /* background-color: rgb(65 65 65 / 52%); */
+  /* Semi-transparent background */
+  /* backdrop-filter: blur(2px); */
+  /* Add blur effect */
+  z-index: 2;
+  margin: 0px;
+  /* Center the container */
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form Heading */
+.signup-container h2 {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  margin-bottom: -26px;
+  padding: 9px;
+  top: -48%;
+  font-family: cursive;
+  color: #ffffff;
+  border-radius: 26px;
+  /* background-color: rgb(124 112 255 / 16%); */
+  /* Semi-transparent background */
+}
+
+/* Form Labels */
+.signup-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.signupform {
+  position: absolute;
+  display: flex;
+  color: aquamarine;
+  flex-direction: column;
+  justify-items: baseline;
+  justify-content: center;
+  font-family: cursive;
+  top: 28%;
+  /* left: 23%; */
+  align-items: center;
+  align-content: space-around;
+}
+
+/* Form Input Fields */
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+  /* width: 100%; */
+  /* display: flex; */
+  width: 110%;
+  height: 29px;
+  padding: 9px;
+  margin-bottom: 44px;
+  border: 0px solid #000000;
+  border-radius: 19px;
+  font-size: 18px;
+  outline: none;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: space-around;
+  flex-wrap: nowrap;
+  transition: all 0.5s ease;
+}
+
+/* Input Field Focus Effect */
+.signup-container input:focus[type="text"],
+.signup-container input:focus[type="email"],
+.signup-container input:focus[type="password"] {
+  border-color: #3498db;
+  background-color: #b4bad7;
+  width: 145%;
+  height: 40px;
+  box-shadow: 2px 12px 19px rgb(21 49 188);
+}
+
+/* Submit Button Styling */
+.signup-container button {
+  width: 70%;
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  background-color: #8312ec;
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  left: 16%;
+  top: 101%;
+  transition: all 0.3s ease;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-container button:hover {
+  background-color: #5186ff;
+  width: 80%;
+  left: 13%;
+  align-items: center;
+}
+
+/* Submit Button Active Effect */
+.signup-container button:active {
+  background-color: #30007a;
+  transform: scale(0.95);
+}
+
+/* Pop-out Message Styling */
+.message {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s;
+}
+
+.message.red {
+  position: sticky;
+  top: 86%;
+  right: 17%;
+  /* Adjusted for better positioning */
+  padding: 8px 4px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: math;
+  z-index: 1000;
+  /* Ensure the button is above other content */
+  border: none;
+  align-items: center;
+  border-radius: 5px;
+  background-image: linear-gradient(184deg, #ff0000, #ffac00);
+  color: #1b2672;
+}
+
+.message.green {
+  /* position: absolute; */
+  top: 9px;
+  right: 22%;
+  /* Adjusted for better positioning */
+  padding: 11px 4px;
+  font-size: 18px;
+  font-weight: 800;
+  font-family: math;
+  z-index: 1000;
+  /* Ensure the button is above other content */
+  border: none;
+  border-radius: 14px;
+  background-color: #3ea910;
+  color: #ffffff;
+}
+
+.message a {
+  color: #2e7d32;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.message a:hover {
+  color: #1e5a25;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,265 @@
+/* General Body Styling */
+body {
+    font-family: Georgia, serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: opacity 0.5s cubic-bezier(0.44, -0.07, 0.79, 0.78);
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+.videobackback {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Background Image */
+.videobackback video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    filter: blur(2px) saturate(1.5) hue-rotate(359deg);
+    transform: translate(-50%, -50%);
+    /* Centers the background image */
+    z-index: -1;
+    /* Places the background behind the content */
+    transition: opacity 1s cubic-bezier(0.85, 0.6, 0.86, 0.69);
+    /* Smooth fade-out transition */
+}
+
+/* Button styling */
+.back-button {
+    position: absolute;
+    top: 18px;
+    font-weight: 800;
+    left: 82%;
+    padding: 10px 19px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    /* Ensure the button is above other content */
+    border: black;
+    border-radius: 19px;
+    width: 80px;
+    transition: all 400ms ease;
+
+}
+
+.back-button:hover {
+    position: absolute;
+    background-color: #06395f;
+    top: 18px;
+    font-weight: 800;
+    left: 82%;
+    padding: 10px 19px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    /* Ensure the button is above other content */
+    border: black;
+    border-radius: 19px;
+    width: 100px;
+}
+
+/* Click Effect */
+.back-button:active {
+    transform: scale(0.95);
+    /* Slight shrink effect */
+}
+
+/* Chibi Image */
+.chibiV2 {
+    position: relative;
+    left: -2%;
+    top: 0%;
+}
+
+.chibiV2 img {
+    position: static;
+    align-items: center;
+    top: 16%;
+    left: 44%;
+    bottom: 15%;
+    padding: 10px 20px;
+    width: 49%;
+    border-radius: 50%;
+    /* vertical-align: top; */
+}
+
+/* Sign-Up Container */
+.signup-container {
+    position: relative;
+    left: -33%;
+    top: 5%;
+    padding-top: 40px;
+    padding-right: 142px;
+    padding-bottom: 142px;
+    padding-left: 118px;
+    text-align: center;
+    border-radius: 1px;
+    /* box-shadow: 0px 0px 74px 25px rgb(135 27 247 / 90%); */
+    z-index: 999;
+    width: 420px;
+    background-color: #033aab;
+    mask: linear-gradient(to right, rgb(0 0 0) 60%, rgb(0 0 0 / 0%) 100%);
+    transition: all 500ms ease;
+}
+
+/* Form Heading */
+.signup-container h2 {
+    text-align: center;
+    /* background-color: #14aeed21; */
+    backdrop-filter: blur(1px);
+    margin-bottom: -24px;
+    border-radius: 9px;
+    padding: 39px 21px 39px 10px;
+}
+
+/* Form Labels */
+.signup-container label {
+    display: block;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+
+/* Form Input Fields */
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+    width: 46%;
+    position: relative;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    padding-left: 6px;
+    padding-right: 30px;
+    margin-bottom: 35px;
+    border: #000000 solid 1px;
+    border-radius: 19px;
+    font-size: 11px;
+    /* text-align: left; */
+    outline: none;
+    /* Remove default focus outline */
+    transition: all 400ms cubic-bezier(0, 0.63, 0.76, 0.69);
+    /* Smooth transition for all properties */
+}
+
+/* Input Field Hover Effect */
+.signup-container input:focus[type="text"],
+.signup-container input:focus[type="email"],
+.signup-container input:focus[type="password"] {
+    background-color: rgb(255 255 255);
+    width: 70%;
+    border-color: #3498db;
+    /* Change border color */
+    /* background-color: #e6f7ff; */
+    /* Change background color */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+    /* Add a glow effect */
+}
+
+/* Submit Button */
+.signup-container button {
+    position: revert;
+    top: 83%;
+    right: 15%;
+    left: 7%;
+    margin-bottom: 51px;
+    width: 55%;
+    padding-top: 12px;
+    padding-right: 3px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    background-color: #8312ec;
+    color: #fff;
+    border: #000000;
+    border-radius: 24px;
+    font-size: 22px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 300ms ease;
+    /* text-align: center; */
+}
+
+/* Submit Button Hover Effect */
+.signup-container button:active {
+    background-color: #30007a;
+    width: 70%;
+    transform: scale(0.95);
+    /* Slight shrink effect */
+}
+
+/* Pop-out Message Styling */
+.message {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s;
+}
+
+.message.red {
+    position: absolute;
+    background-color: #ff0026;
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 19px 24px 18px 20px;
+    width: 37%;
+    top: 84%;
+    left: 26%;
+    font-weight: 500;
+}
+
+.message.green {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.message a {
+    color: #2e7d32;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.message a:hover {
+    color: #1e5a25;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

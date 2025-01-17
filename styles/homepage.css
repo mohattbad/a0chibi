@@ -1,0 +1,158 @@
+/* General Reset */
+body,
+h1,
+button,
+a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Gradient */
+body {
+    /* position: unset; */
+    background: linear-gradient(135deg, #4c276f, #ae0606);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
+    /* Smooth fade-out transition */
+}
+
+/* Top Navigation */
+
+.sign-up {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Adjusted for better positioning */
+    padding: 8px 22px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the button is above other content */
+    animation: pulse 2s infinite;
+    border: none;
+    border-radius: 50px;
+    background-color: #e37d23;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.sign-up:hover {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Adjusted for better positioning */
+    padding: 8px 22px;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the button is above other content */
+    animation: pulse 2s infinite;
+    border: none;
+    border-radius: 50px;
+    background-color: #a20606;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.sign-up:active {
+    background-color: #1d0603;
+
+}
+
+.login {
+  position: absolute;
+  top: 20px;
+  right: 20px; /* Adjusted for better positioning */
+  padding: 8px 22px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 1000; /* Ensure the button is above other content */
+  animation: pulse 2s infinite;
+  border: none;
+  border-radius: 50px;
+  background-color: #e37d23;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.login:hover {
+    position: absolute;
+  top: 20px;
+  right: 20px; /* Adjusted for better positioning */
+  padding: 8px 22px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 1000; /* Ensure the button is above other content */
+  animation: pulse 2s infinite;
+  border: none;
+  border-radius: 50px;
+  background-color: #a10500;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.login:active {
+    background-color: #240804;
+
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    color: white;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Start Now Button */
+.start-now-btn {
+    background-color: #d8553e;
+    color: white;
+    font-size: 24px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.start-now-btn:hover {
+    background-color: #FF4500;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

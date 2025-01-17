@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/dashstyles.css">
+    <link rel="icon" type="image/x-icon" href="img/logo1.ico">
+    <!-- Dashboard Script -->
+    <script src="scripts/dashv2.js" type="module"></script>
+</head>
+<body>
+    <div class="background">
+        <img src="img/dashback.jpg" alt="background">
+    </div>
+    <div class="dashboard-container" id="dashboardContent" style="display: none;">
+        <div class="chibiV2">
+            <img src="img/chibifly.gif" alt="chibiV2">
+        </div>
+        <h1>Dashboard</h1>
+        <p>You have successfully logged in</p>
+
+        
+        <button class="btn-red" onclick="YRPRFL()">
+            <img src="img/BUTTONPRFL.png" alt="Profile Icon" class="btn-a-icon">
+            profile
+        </button>
+        <button class="btn-T" onclick="settings()">
+                    <img src="img/settings.png" alt="settings icon" class="btn-b-icon">
+                Settings</button>
+        <button class="btn-F" onclick="friends()">
+                    <img src="img/friends.png" alt="friends icon" class="btn-c-icon">
+                friends</button>
+        <button class="btn-g" onclick="search()">
+            <img src="img/search.png" alt="search icon" class="btn-d-icon">
+        search</button>
+        <button class="btn-black" onclick="chat()">
+        <img src="img/chat.png" alt="chat icon" class="btn-e-icon">
+        Messages</button>
+        <button class="btn-logout" onclick="logout()">
+        <img src="img/logout.png" alt="Logout icon" class="btn-f-icon">
+        Logout</button>
+    </div>
+    <div id="loadingPage" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <p>Loading...</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A0 LOGIN</title>
+    <link rel="stylesheet" href="../styles/loginstyles.css">
+    <link rel="icon" type="image/x-icon" href="../img/logo1.ico">
+    <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Auth Script -->
+    <script src="../scripts/login.js" type="module" defer></script>
+</head>
+
+<body>
+    <div class="login-container" id="loginPage">
+        <div class="logo">
+            <img src="../img/chibichan.gif" alt="A0 Logo">
+        </div>
+        <h1>Login to A0</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        <div class="links">
+            <a href="#">Forgot password?</a>
+            <a href="sign-up.html">Create an account</a>
+        </div>
+    </div>
+
+    <div class="loading-page" id="loadingPage" style="display: none;">
+        <!-- Background Video -->
+        <video autoplay muted loop id="loading-video">
+            <source src="../vid-aud/videoback1.mp4" type="video/mp4">
+        </video>
+        <div class="loader"></div>
+        <!-- Welcome Sound -->
+        <audio id="welcome-sound" src="../vid-aud/welcomepact.mp3" preload="auto"></audio>
+    </div>
+</body>
+
+</html>

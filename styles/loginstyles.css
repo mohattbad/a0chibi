@@ -1,0 +1,185 @@
+/* Basic Reset */
+body, h1, form, label, input, button, a, .loading-page, .loader {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Updated */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Center the login container */
+body {
+    display: flex;
+    background-image: linear-gradient(rgb(255, 47, 0), rgb(94, 5, 116));
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login container styling */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.541);
+    background-image: url("/img/backlogin.jpg");
+    padding: 19px;
+    background-size: cover;
+    border-radius: 9px;
+    box-shadow: 0 0 11px rgba(232, 102, 102, 0.58);
+    width: 720px;
+    height: 800px;
+    text-align: center;
+}
+
+.chibi img {
+    width: 130px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.logo img {
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 70px;
+}
+
+.login-container h1 {
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 700; /* Bold weight */
+    -webkit-text-stroke: 0.8px #000000;
+    margin-bottom: 5px;
+    color: rgb(237, 143, 152);
+    box-shadow: #0366d6;
+    font-size: 25px;
+    text-align: center;
+}
+
+.input-group input {
+    width: 60%;
+    padding: 5px;
+    border: 2px solid #e1e4e8;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.input-group input:focus {
+    border-color: #0366d6;
+    outline: none;
+}
+
+/* Button styling */
+.btn-login {
+    width: 50%;
+    font-weight: 700; /* Bold weight */
+    padding: 10px;
+    background-color: rgb(84, 28, 251);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.btn-login:hover {
+    transition-duration: 500ms;
+    transition-property: initial;
+    background-color: rgb(49, 28, 95);
+}
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Links styling */
+.links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    color: #e0d0ca;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.links a:hover {
+    display: block;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgb(255, 254, 254);
+    text-decoration: underline;
+    transition-duration: 300ms;
+}
+
+/* Loading page styling */
+.loading-page {
+    display: none;
+    position: fixed; /* Fixed positioning to center on the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to truly center */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Place behind other content */
+}
+/* Fade-out animation for the video */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Smooth fade-out over 1.5 seconds */
+}
+/* Welcome Sound (hidden) */
+#welcomeSound {
+    display: none; /* Hide the audio element */
+}
+.loader {
+    border: 8px solid #000000;
+    border-top: 8px solid #e79273;
+    border-radius: 50%; /* Ensure it's a perfect circle */
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
